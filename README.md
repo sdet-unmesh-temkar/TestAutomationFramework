@@ -4,6 +4,7 @@ Framework features:
 3. Retry mechanism for failed tests to improve test stability
 2. Centralized and thread safe WebDriver management
 3. Page Object Model (POM) design pattern for better maintainability
+4. POJO classes for API tests, serialization and deserialization of JSON data.
 4. TestNG for test execution and reporting
 5. Maven for dependency management and build automation
 6. ExtentReports for detailed test reporting
