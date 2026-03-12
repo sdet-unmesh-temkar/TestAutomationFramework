@@ -25,3 +25,17 @@ Problems:
 2. failed screenshots currently overwrite each other, need to implement a mechanism to save screenshots with unique names (e.g., timestamp or test method name).
 3. For cucumber tests, need to implement a mechanism to capture screenshots on failure and save them with unique names (e.g., timestamp or scenario name).
 4. Normal Screenshots also overwrite each other, need to implement a mechanism to save screenshots with unique names (e.g., timestamp or test method name) for normal screenshots as well.
+
+Q4. Explain your automation framework?
+Answer:
+My automation framework is built in Java.
+It integrates Selenium for web testing and Rest Assured for API testing.
+We follow a layered architecture — Page Object Model for maintainability, utility classes for reusability, and ThreadLocal driver management for parallel execution.
+Maven is our build tool.
+We use Cucumber for BDD scenarios so business teams can read and understand tests easily.
+For logging we rely on Logback.
+For reporting we’ve integrated Extent Reports
+We have also implemented listeners to capture screenshots on failure.
+Test data is externalized in property files and managed per environment, which makes the framework flexible across QA, UAT, and production.
+On the CI/CD side, we’ve set up GitHub Actions workflows to run tests in parallel, publish reports, and store artifacts like logs and screenshots.
+Overall, the design is modular, scalable, and easy to extend — new pages or APIs can be added quickly without impacting existing tests.
