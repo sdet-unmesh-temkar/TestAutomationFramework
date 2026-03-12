@@ -1,4 +1,4 @@
-package org.naukriAutomation.tests;
+package org.naukriAutomation.tests.testNG;
 
 import org.naukriAutomation.Listener.TestListener;
 import org.naukriAutomation.POM.NaukriHomePage;
