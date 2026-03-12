@@ -17,3 +17,10 @@ Framework features:
 14. Inheritance: BaseTest class can be extended by all test classes to inherit common setup and teardown methods, reducing code duplication.
 15. Polymorphism: Test classes can override methods from the BaseTest class to provide specific implementations for different test scenarios, allowing for flexible and reusable code.
 16. Abstraction: The framework abstracts away the complexities of WebDriver management, test data handling, and reporting, allowing testers to focus on writing test logic without worrying about the underlying implementation details.
+17. Test written using cucumber as well as testng, performed setup and tear down in both styles
+
+Problems:
+1. for testNg naukri test, if test fails, @AfterMethod kills the driver and Listener does not have driver to capture screenshot
+2. failed screenshots currently overwrite each other, need to implement a mechanism to save screenshots with unique names (e.g., timestamp or test method name).
+3. For cucumber tests, need to implement a mechanism to capture screenshots on failure and save them with unique names (e.g., timestamp or scenario name).
+4. Normal Screenshots also overwrite each other, need to implement a mechanism to save screenshots with unique names (e.g., timestamp or test method name) for normal screenshots as well.

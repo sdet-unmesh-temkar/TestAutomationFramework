@@ -1,0 +1,15 @@
+<suite name="Naukri Suite" parallel="tests" thread-count="2">
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.naukriAutomation.tests.testNG.NaukriAppUpdateAutomationTest"/>
+        </classes>
+    </test>
+
+    <test name="Edge Test">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="org.naukriAutomation.tests.testNG.NaukriAppUpdateAutomationTest"/>
+        </classes>
+    </test>
+</suite>

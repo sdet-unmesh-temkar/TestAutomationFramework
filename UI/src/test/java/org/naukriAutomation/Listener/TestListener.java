@@ -13,15 +13,28 @@ import java.io.IOException;
 
 public class TestListener implements ITestListener {
 
-    private final WebDriver driver = DriverFactory.getDriver();
+//    private final WebDriver driver = DriverFactory.getDriver();
+//
+//    @Override
+//    public void onTestFailure(ITestResult result) {
+//        try {
+//            File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            FileHandler.copy(source, new File("target/failedTestShot.jpeg"));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        try {
-            File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileHandler.copy(source, new File("target/failedTestShot.jpeg"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        WebDriver driver = DriverFactory.getDriver(); // fresh reference
+        if (driver != null) {
+            try {
+                File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                FileHandler.copy(source, new File("target/failedTestShot.jpeg"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

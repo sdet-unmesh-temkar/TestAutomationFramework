@@ -2,7 +2,6 @@ package org.naukriAutomation.tests.base;
 
 import org.naukriAutomation.webdrivermanager.DriverFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.time.Duration;
