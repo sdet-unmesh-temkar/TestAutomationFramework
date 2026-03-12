@@ -1,13 +1,14 @@
-package java.org.naukriAutomation.POM;
+package org.naukriAutomation.POM;
 
-import naukriUpdate.utils.ChromeDriverManager;
-import naukriUpdate.utils.ElementInteractions;
+import org.naukriAutomation.webdrivermanager.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.ElementInteractions;
 
 public class NaukriLoginPage {
+    private WebDriver driver = DriverFactory.getDriver();
 
     @FindBy(id = "login_Layer") private WebElement loginButton;
 
@@ -17,29 +18,27 @@ public class NaukriLoginPage {
 
     @FindBy(xpath = "//button[text()=\"Login\"]") private WebElement signIn;
 
-    private final ChromeDriverManager chromeDriverManager = new ChromeDriverManager();
-
     public NaukriLoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     public void clickLoginBtn() {
-        ElementInteractions.highlightElement(chromeDriverManager.getDriver(), loginButton);
+        ElementInteractions.highlightElement(driver, loginButton);
         loginButton.click();
     }
 
     public void enterUserName(String userName){
-        ElementInteractions.highlightElement(chromeDriverManager.getDriver(), username);
+        ElementInteractions.highlightElement(driver, username);
         username.sendKeys(userName);
     }
 
     public void enterPassWord(String passWord){
-        ElementInteractions.highlightElement(chromeDriverManager.getDriver(), password);
+        ElementInteractions.highlightElement(driver, password);
         password.sendKeys(passWord);
     }
 
     public void clickOnSignIn(){
-        ElementInteractions.highlightElement(chromeDriverManager.getDriver(), signIn);
+        ElementInteractions.highlightElement(driver, signIn);
         signIn.click();
     }
 }

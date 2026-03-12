@@ -1,4 +1,4 @@
-package java.org.naukriAutomation.webdrivermanager;
+package org.naukriAutomation.webdrivermanager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,4 +1,4 @@
-package java.org.naukriAutomation.POM;
+package org.naukriAutomation.POM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

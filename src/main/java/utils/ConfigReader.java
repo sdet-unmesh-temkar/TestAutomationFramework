@@ -1,4 +1,4 @@
-package java.org.naukriAutomation.utils;
+package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

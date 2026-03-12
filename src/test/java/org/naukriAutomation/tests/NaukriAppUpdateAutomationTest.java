@@ -1,5 +1,9 @@
-package java.org.naukriAutomation.tests;
+package org.naukriAutomation.tests;
 
+import org.naukriAutomation.Listener.TestListener;
+import org.naukriAutomation.POM.NaukriHomePage;
+import org.naukriAutomation.POM.NaukriLoginPage;
+import org.naukriAutomation.webdrivermanager.DriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
@@ -8,10 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.org.naukriAutomation.Listener.TestListener;
-import java.org.naukriAutomation.POM.NaukriHomePage;
-import java.org.naukriAutomation.POM.NaukriLoginPage;
-import java.org.naukriAutomation.webdrivermanager.DriverFactory;
+
 import java.time.Duration;
 
 @Listeners(TestListener.class)
