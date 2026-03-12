@@ -11,6 +11,7 @@
   <url>http://maven.apache.org</url>
     <modules>
         <module>UI</module>
+        <module>API</module>
     </modules>
 
     <properties>
