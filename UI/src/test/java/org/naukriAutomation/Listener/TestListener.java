@@ -1,5 +1,6 @@
 package org.naukriAutomation.Listener;
 
+import org.naukriAutomation.webdrivermanager.DriverFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,6 @@ import org.testng.ITestResult;
 
 import java.io.File;
 import java.io.IOException;
-import org.naukriAutomation.webdrivermanager.DriverFactory;
 
 public class TestListener implements ITestListener {
 
