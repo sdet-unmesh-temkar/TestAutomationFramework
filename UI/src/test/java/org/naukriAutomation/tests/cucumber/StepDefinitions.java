@@ -1,22 +1,34 @@
 package org.naukriAutomation.tests.cucumber;
 
 import io.cucumber.java.en.*;
+import org.naukriAutomation.actions.ProfileActions;
+import org.naukriAutomation.webdrivermanager.DriverFactory;
 
 public class StepDefinitions {
+    private ProfileActions profileActions;
+
+    public StepDefinitions() {
+        	profileActions = new ProfileActions(DriverFactory.getDriver());
+    }
+
     @Given("We launch the naukri application")
-    public void we_launch_the_naukri_application() {
-        System.out.println("step running");
+    public void openApp() {
+        profileActions.openApp();
     }
+
     @Given("We enter login credentials")
-    public void we_enter_login_credentials() {
-        System.out.println("step running");
+    public void login() {
+        profileActions.login("unmeshtemkar@zohomail.in", "1995@umaaa");
     }
+
     @When("We update the profile details")
-    public void we_update_the_profile_details() {
-        System.out.println("step running");
+    public void updateProfile() {
+        profileActions.viewProfile();
+        profileActions.editResumeHeadline();
     }
+
     @Then("We verify the profile is updated successfully")
-    public void we_verify_the_profile_is_updated_successfully() {
-        System.out.println("step running");
+    public void validateProfileUp() {
+        profileActions.saveProfile();
     }
 }

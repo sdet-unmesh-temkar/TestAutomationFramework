@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.ElementInteractions;
 
 public class NaukriLoginPage {
+
     private WebDriver driver = DriverFactory.getDriver();
 
     @FindBy(id = "login_Layer") private WebElement loginButton;

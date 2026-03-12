@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeClass;
                 "html:target/cucumber-html-report.html",
                 "json:target/cucumber.json"
         },
-        dryRun = true,
+//        dryRun = true,
         monochrome = true
 )
 
