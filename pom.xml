@@ -20,12 +20,6 @@
 
   <dependencies>
 
-      <dependency>
-          <groupId>io.rest-assured</groupId>
-          <artifactId>rest-assured</artifactId>
-          <version>6.0.0</version>
-      </dependency>
-
       <!--Write here why you need this dependency-->
       <dependency>
           <groupId>org.testng</groupId>
@@ -45,27 +39,6 @@
           <groupId>io.cucumber</groupId>
           <artifactId>cucumber-testng</artifactId>
           <version>7.34.3</version>
-      </dependency>
-
-      <!--Write here why you need this dependency-->
-      <dependency>
-          <groupId>org.hamcrest</groupId>
-          <artifactId>hamcrest</artifactId>
-          <version>3.0</version>
-      </dependency>
-
-      <!--Write here why you need this dependency-->
-      <dependency>
-          <groupId>io.rest-assured</groupId>
-          <artifactId>json-schema-validator</artifactId>
-          <version>6.0.0</version>
-      </dependency>
-
-      <!--Write here why you need this dependency-->
-      <dependency>
-          <groupId>com.fasterxml.jackson.core</groupId>
-          <artifactId>jackson-databind</artifactId>
-          <version>2.21.1</version>
       </dependency>
 
       <!-- Read data from Excel -->
