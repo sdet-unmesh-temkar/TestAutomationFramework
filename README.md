@@ -33,7 +33,7 @@ It integrates Selenium for web testing and Rest Assured for API testing.
 We follow a layered architecture — Page Object Model for maintainability, utility classes for reusability, and ThreadLocal driver management for parallel execution.
 Maven is our build tool.
 We use Cucumber for BDD scenarios so business teams can read and understand tests easily.
-For logging we rely on Logback.
+For logging we rely on Logback..
 For reporting we’ve integrated Extent Reports
 We have also implemented listeners to capture screenshots on failure.
 Test data is externalized in property files and managed per environment, which makes the framework flexible across QA, UAT, and production.
